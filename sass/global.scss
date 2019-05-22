@@ -1,0 +1,219 @@
+$mobile-lg: 500px;
+$tablet-sm: 750px;
+@font-face {
+  font-family:"Roboto";
+  font-weight:700;
+  font-style:normal;
+  src:url(../fonts/Robotobold.woff2) format("woff2"),
+  url(../fonts/Robotobold.woff) format("woff");
+}
+@font-face {
+  font-family:"Roboto";
+  font-weight:400;
+  font-style:normal;
+  src:url(../fonts/Roboto.woff2) format("woff2"),
+  url(../fonts/Roboto.woff) format("woff");
+}
+body {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 140%;
+  color: #fdfdfd;
+  font-weight: 400;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+button:focus, select:focus, input:focus, select, option:focus {
+  outline: none;
+}
+img, iframe {
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+  &:hover{
+    text-decoration: none;
+  }
+}
+.wrapper {
+  position: absolute;
+  top: 20%;
+  left: calc(50% - 150px);
+  z-index: 1;
+  box-sizing: border-box;
+  width: 300px;
+  height: 250px;
+  padding: 20px 15px;
+  background-color: rgba(221, 221, 221, 0.4);;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.48);
+}
+.wrap-form{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px 5px;
+  height: 100%;
+  align-items: flex-start;
+  align-content: flex-start;
+  &__player{
+    width: 100%;
+    background-color: rgba(240,255,255,.61);
+    border: 0;
+    height: 30px;
+    border-radius: 5px;
+    padding: 0 0 0 10px;
+    background-image: url(../img/icons/angle-double-down.svg);
+    background-repeat: no-repeat;
+    background-position: 97% 50%;
+    -webkit-background-size: 80%;
+    background-size: 13px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    margin-bottom: 20px;
+  }
+  &__pass{
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 0 0 0 10px;
+    background-color: rgba(240, 255, 255, 0.61);
+    border: 0;
+    height: 30px;
+    border-radius: 5px;
+  }
+  &__error{
+    width: 100%;
+    text-align: center;
+    color: #ff4a53;
+    margin: 0;
+  }
+  &__btn{
+    align-self: self-end;
+    border:0;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 7px 15px;
+    border-radius: 10px;
+    background-image: linear-gradient(to top, #764fff, #258048);
+    cursor: pointer;
+    color: #fdfdfd;
+  }
+}
+body.lk{
+  background-image: url("../img/bg-lk.jpg");
+  -webkit-background-size: contain;
+  background-size: contain;
+  background-color: #191719;
+  background-repeat: round;
+  position: relative;
+  padding-top: 10px;
+ &::before{
+   content:"";
+   position: absolute;
+   display:block;
+   top:0;
+   bottom:0;
+   left:0;
+   right: 0;
+   background-color: rgba(25, 23, 25, 0.65);
+   z-index: 1;
+
+ }
+}
+.wrapper-lk{
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 30px auto 0;
+  padding: 30px 40px;
+  &__title{
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+}
+.poker-video{
+  margin: 20px auto;
+  padding: 30px 10px 40px;
+  &__title{
+    text-align: center;
+    margin-bottom: 25px;
+  }
+}
+.video-items{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  &__item{
+    width: 45%;
+    margin-bottom: 20px;
+  }
+}
+.info-file{
+  margin: 50px auto;
+  padding: 20px 10px;
+  &__title{
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  &__link{
+    font-size: 110%;
+    color: #fdfdfd;
+    &:hover{
+      color: #959595;
+    }
+  }
+}
+table.player-static {
+  width: 80%;
+  color: #232323;
+  margin-top: 7px;
+  margin-bottom: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+}
+table.player-static tfoot{
+  font-weight: bold;
+}
+
+table.player-static caption {
+  font-size: 1.2em;
+  text-align: center;
+  padding: 10px;
+  color: #3a6e9d;
+}
+table.player-static tr:nth-child(even) {
+  background: #f4f6f7;
+}
+table.player-static tr:nth-child(odd) {
+  background: #959595;
+}
+
+table.player-static th,table.player-static td {
+  font-size: 15px;
+  border: 1px solid #dbdbdb;
+  text-align: left;
+  padding: 7px;
+}
+table.player-static th:last-child, table.player-static td:last-child
+{
+  text-align:center;
+}
+table.player-static th {
+  color: #ffffff;
+  background: linear-gradient(to top,#2AB61A 0%,#0b8c34 60%);
+  background: -webkit-linear-gradient(top,#2AB61A 0%,#0b8c34 60%);
+}
+.water-effect{
+  position: absolute;
+  height: 100%;
+  left: 0;
+  right: 0;
+  background-image: url("../img/bg-poker.jpg");
+  background-size: cover;
+}
