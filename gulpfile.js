@@ -14,8 +14,7 @@ let svgmin = require("gulp-svgmin");
 gulp.task("images", function() {
     return gulp.src("img/**/*.{png,jpg,gif,svg}")
         .pipe(imagemin([
-            imagemin.optipng({optimizationLevel: 3}),
-            imagemin.jpegtran({progressive: true})
+            imagemin.optipng({optimizationLevel: 3})
         ]))
         .pipe(gulp.dest("build/img"));
 });

@@ -209,11 +209,20 @@ table.player-static th {
   background: linear-gradient(to top,#2AB61A 0%,#0b8c34 60%);
   background: -webkit-linear-gradient(top,#2AB61A 0%,#0b8c34 60%);
 }
-.water-effect{
+.water-effect {
   position: absolute;
   height: 100%;
   left: 0;
   right: 0;
   background-image: url("../img/bg-poker.jpg");
   background-size: cover;
+}
+//Медиа запросы
+@media (max-width:720px) {
+  table.player-static{
+    width: 90%;
+  }
+  .video-items__item{
+    width: 90%;
+  }
 }
