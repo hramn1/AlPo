@@ -240,7 +240,7 @@ table.player-static th {
   border: 1px solid rgb(6, 110, 244);
 }
 
-.water-effect{
+.water-effect {
   position: absolute;
   height: 100%;
   left: 0;
@@ -312,4 +312,13 @@ table.player-static th {
   margin-bottom: 20px;
   margin-top: 20px;
   border-radius: 16px;
+}
+//Медиа запросы
+@media (max-width:720px) {
+  table.player-static{
+    width: 90%;
+  }
+  .video-items__item{
+    width: 90%;
+  }
 }
