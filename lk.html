@@ -6,11 +6,13 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css">
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <title>Alkopoker</title>
 </head>
 <body class="lk">
 <div class="wrapper-lk">
+  <a class="wrapper-logout" href="logout.php">Выйти</a>
   <h1 class="wrapper-lk__title">Имя игрока</h1>
   <div class="static">
     <table class="player-static">
@@ -29,30 +31,57 @@
         </tr>
       </tfoot>
       <tr>
-        <td>27.03.19</td>
+        <td class="date-play">27.03.19</td>
         <td>4000</td>
         <td>0</td>
         <td class="player-static__date-sum">-4000</td>
       </tr>
       <tr>
-        <td>27.03.19</td>
+        <td class="date-play">27.03.19</td>
         <td>3000</td>
         <td>5000</td>
         <td class="player-static__date-sum">2000</td>
       </tr>
       <tr>
-        <td>27.03.19</td>
+        <td class="date-play">27.03.19</td>
         <td>2000</td>
         <td>6000</td>
         <td class="player-static__date-sum">4000</td>
       </tr>
       <tr>
-        <td>27.03.19</td>
+        <td class="date-play">27.03.19</td>
         <td>5000</td>
         <td>0</td>
         <td class="player-static__date-sum">-5000</td>
       </tr>
     </table>
+    <div class="chart-stat">
+    <canvas id="myChart" width="400" height="450"></canvas>
+    </div>
+    <form action="" method="post" class="static-input">
+      <table class="input-table">
+        <tr>
+          <th>Игрок</th>
+          <th>Дата</th>
+          <th>Заход</th>
+          <th>Выход</th>
+        </tr>
+        <tr>
+          <td>
+            <select name="player">
+              <option  value="1">trt</option>
+              <option  value="2">fd</option>
+              <option  value="3">fd</option>
+              <option  value="4">df</option>
+          </select>
+          </td>
+          <td><input size="5" type="date"></td>
+          <td><input size="10" type="number"></td>
+          <td><input size="10" type="number"></td>
+        </tr>
+      </table>
+      <button class="submit-form" type="submit">Отправить</button>
+   </form>
   </div>
   <div class="info-file">
     <h2 class="info-file__title">Книги таблицы и прочее о покере</h2>
@@ -76,7 +105,8 @@
   </div>
 
 </div>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
 <script src="js/jquery.ripples.js"></script>
 <script src="js/script.js"></script>
 </body>

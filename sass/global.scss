@@ -21,8 +21,9 @@ body {
   color: #fdfdfd;
   font-weight: 400;
   -webkit-background-size: cover;
-  background-size: cover;
+  background-size: auto, 100%;
   background-repeat: no-repeat;
+  background-image: url("../img/bg-poker.jpg");
 }
 button:focus, select:focus, input:focus, select, option:focus {
   outline: none;
@@ -50,6 +51,16 @@ a {
   -moz-border-radius: 15px;
   border-radius: 15px;
   box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.48);
+  &-logout{
+    display: block;
+    margin-left: auto;
+    margin-right: 20px;
+    max-width: 120px;
+    color: #fdfdfd;
+    &:hover{
+      color: #dddddd;
+    }
+  }
 }
 .wrap-form{
   display: flex;
@@ -106,10 +117,9 @@ a {
 }
 body.lk{
   background-image: url("../img/bg-lk.jpg");
-  -webkit-background-size: contain;
-  background-size: contain;
-  background-color: #191719;
-  background-repeat: round;
+  background-size: auto,100%;
+  background-color: rgb(25, 23, 25);
+  background-repeat: repeat-y;
   position: relative;
   padding-top: 10px;
  &::before{
@@ -151,10 +161,13 @@ body.lk{
   &__item{
     width: 45%;
     margin-bottom: 20px;
+    @media(max-width: $tablet-sm){
+      width: 100%;
+    }
   }
 }
 .info-file{
-  margin: 50px auto;
+  margin: 20px auto;
   padding: 20px 10px;
   &__title{
     text-align: center;
@@ -163,6 +176,19 @@ body.lk{
   &__link{
     font-size: 110%;
     color: #fdfdfd;
+    padding-left: 20px;
+    position: relative;
+    &::before{
+      content:"";
+      display: block;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 0;
+      left:0;
+      background-image: url(/img/icons/file-pdf.svg);
+      background-repeat: no-repeat;
+    }
     &:hover{
       color: #959595;
     }
@@ -176,6 +202,9 @@ table.player-static {
   margin-left: auto;
   margin-right: auto;
   border-collapse: collapse;
+  @media (max-width: $tablet-sm) {
+    width: 100%;
+  }
 }
 table.player-static tfoot{
   font-weight: bold;
@@ -206,9 +235,11 @@ table.player-static th:last-child, table.player-static td:last-child
 }
 table.player-static th {
   color: #ffffff;
-  background: linear-gradient(to top,#2AB61A 0%,#0b8c34 60%);
-  background: -webkit-linear-gradient(top,#2AB61A 0%,#0b8c34 60%);
+  background: linear-gradient(top, #64b0b6 0%, #15508c 60%);
+  background: -webkit-linear-gradient(top, #64b0b6 0%, #15508c 60%);
+  border: 1px solid rgb(6, 110, 244);
 }
+
 .water-effect{
   position: absolute;
   height: 100%;
@@ -216,4 +247,69 @@ table.player-static th {
   right: 0;
   background-image: url("../img/bg-poker.jpg");
   background-size: cover;
+  @media (max-width: $tablet-sm) {
+    display: none;
+  }
+}
+.static-input{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  @media (max-width: $tablet-sm) {
+    margin-left: 0;
+  }
+}
+.input-table{
+  max-width: 100%;
+  border-collapse: collapse;
+  & th {
+    background-color: #15508c;
+    border: 1px solid #232323;
+  }
+  & td {
+    max-width: 30%;
+    padding: 0;
+    border: 1px solid #232323;
+  }
+ & input[type="date"]{
+   max-width: 60px;
+   background-color: #ddd;
+   border:0;
+   height: 35px;
+   padding: 0;
+ }
+  & input[type="number"]{
+    max-width: 60px;
+    background-color: #ddd;
+    border:0;
+    height: 35px;
+    padding: 0;
+  }
+  & select{
+    height: 35px;
+    border: 0;
+    background-color: #ddd;
+
+  }
+}
+.submit-form{
+  border:0;
+  background-color: #15508c;
+  margin-top: 10px;
+  color:#fdfdfd;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 7px;
+}
+.error{
+  color: #ff3b63;
+}
+.chart-stat{
+  max-width: 600px;
+  background-color: rgba(255,255,255, 0.3);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border-radius: 16px;
 }
