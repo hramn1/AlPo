@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <title>Document</title>
+</head>
+<body class="lk">
+  <div class="wrapper-lk">
+    <a class="wrapper-logout" href="logout.php">Выйти</a>
+    <section class="player-rank">
+      <div class="player-ranking">
+        <p class="player-ranking__rank">Чемпион</p>
+        <img class="player-ranking__img" src="/img/champ.jpg" alt="Аватарка">
+        <p class="player-ranking__name">Стас</p>
+        <p class="player-ranking__income">10000 &#8399;</p>
+      </div>
+      <div class="player-ranking">
+        <p class="player-ranking__rank">Генеральный спонсор</p>
+        <img class="player-ranking__img" src="/img/sponsor.jpg" alt="Аватарка">
+        <p class="player-ranking__name">Буре</p>
+        <p class="player-ranking__income">-10000 &#8399;</p>
+      </div>
+    </section>
+    <section class="player-stat">
+      <div class="chart-stat">
+        <canvas id="CharTotal" width="400" height="450"></canvas>
+      </div>
+      <table class="player-static">
+        <thead>
+          <tr>
+            <th>Место</th>
+            <th>Ник</th>
+            <th>Результат</th>
+            <th>Фракция</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+              <td class="player-position">1</td>
+              <td class="player-nik">Стас</td>
+              <td class="player-income">3000</td>
+              <td class="player-fraq" data-fraq="profi"></td>
+            </tr>
+            <tr>
+              <td class="player-position">2</td>
+              <td class="player-nik">Bure</td>
+              <td class="player-income">-13000</td>
+              <td class="player-fraq" data-fraq="satan"></td>
+            </tr>
+            <tr>
+              <td class="player-position">3</td>
+              <td class="player-nik">Bure1</td>
+              <td class="player-income">4000</td>
+              <td class="player-fraq" data-fraq="nazi"></td>
+            </tr>
+            <tr>
+              <td class="player-position">4</td>
+              <td class="player-nik">Bure2</td>
+              <td class="player-income">-3000</td>
+              <td class="player-fraq" data-fraq="amateur"></td>
+            </tr>
+            <tr>
+              <td class="player-position">5</td>
+              <td class="player-nik">Bure3</td>
+              <td class="player-income">6000</td>
+              <td class="player-fraq" data-fraq="nazi"></td>
+            </tr>
+            <tr>
+              <td class="player-position">6</td>
+              <td class="player-nik">Bure4</td>
+              <td class="player-income">7000</td>
+              <td class="player-fraq" data-fraq="profi"></td>
+            </tr>
+            <tr>
+              <td class="player-position">7</td>
+              <td class="player-nik">Bure5</td>
+              <td class="player-income">-6000</td>
+              <td class="player-fraq" data-fraq="profi"></td>
+            </tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+  <script src="js/total.js"></script>
+</body>
+</html>

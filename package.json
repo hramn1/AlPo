@@ -4,7 +4,7 @@
   "private": true,
   "description": "alkopoker",
   "devDependencies": {
-    "browser-sync": "^2.26.3",
+    "browser-sync": "^2.26.7",
     "gulp": "^4.0.0",
     "gulp-csso": "^3.0.1",
     "gulp-imagemin": "^5.0.3",

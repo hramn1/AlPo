@@ -313,10 +313,35 @@ table.player-static th {
   margin-top: 20px;
   border-radius: 16px;
 }
+.player-ranking{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(255,255,255,.3);
+  width: 70%;
+  padding: 10px 15px 15px;
+  border-radius: 7px;
+  margin: 10px auto;
+  &__rank{
+    text-transform: uppercase;
+    color: gold;
+    font-weight: 700;
+  }
+  &__img {
+    width: 120px;
+    border-radius: 50%;
+  }
+}
 //Медиа запросы
 @media (max-width:720px) {
   table.player-static{
     width: 90%;
+  }
+  .player-ranking{
+    width: 95%;
+    margin: 0 auto;
+    padding: sha512-sGkPx;
   }
   .video-items__item{
     width: 90%;
